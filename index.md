@@ -10,7 +10,7 @@ system libraries, settings.
 Containers are similar to virtual machines, however, the virtualization
 happens at a different point. 
 
-![virtual_machines_vs_containers](../fig/01-virtual_machines_vs_containers.png)
+![virtual_machines_vs_containers](fig/01-virtual_machines_vs_containers.png)
 {: style="width: 50%;" }
 *Image source: [TechTarget]*
 
