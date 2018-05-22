@@ -8,10 +8,10 @@ that includes everything needed to run: code, runtime, system tools,
 system libraries, settings.
 
 Containers are similar to virtual machines, however, the virtualization
-happens at a different point. 
+happens at a different point.
 
 ![virtual_machines_vs_containers](fig/01-virtual_machines_vs_containers.png)
-{: style="width: 50%;" }
+{: style="width: 70%; align: center;" }
 *Image source: [TechTarget]*
 
 Although it can be hard to give a quick answer as to which one to use,
