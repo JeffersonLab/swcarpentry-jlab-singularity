@@ -59,5 +59,8 @@ automatic building on Docker Hub itself.
 > > It may take some time while Docker Hub creates your container, but you
 > > should end up with a GitHub repository like [this one](https://github.com/wdconinc/lolcow)
 > > and a Docker Hub page like [this one](https://hub.docker.com/r/wdconinc/lolcow/).
+> >
+> > Depending on the order in which you complete the instructions, you may need
+> > to manually trigger your build on Docker Hub.
 > {: .solution}
 {: .challenge}
