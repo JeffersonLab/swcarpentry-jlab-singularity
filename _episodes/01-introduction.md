@@ -152,15 +152,35 @@ singularity shell GodloveD-lolcow-master-latest.simg
 Now is a good time to wade into the intricacies of a fundamental debate in how
 containers are to be used.
 
-- Some containers are provided as full-fledged environments, and the user is
-  expected to use the `shell` command to interact with them.
-- Other containers are provided as appliances (or apps). The user calls the
+- Some containers are provided as appliances (or apps). The user calls the
   container as they would call a command, using `singularity run` with possibly
-  a list of arguments to be passed to the container.
+  a list of arguments to be passed to the container. This is how we ran the
+  lolcow container above at first.
+- Other containers are provided as full-fledged environments, and the user is
+  expected to use the `shell` command to interact with them. This is how we
+  ran the lolcow container by opening a shell into them.
 
 We are not going to restrict ourselves to one viewpoint. Instead, think about
 what best fits the use case that you have in mind. As a user you may find the
 'container as an environment' more common at first.
+
+> ## What makes a container an appliance?
+>
+> Start a shell inside the lolcow container and look at the file `/singularity`.
+> What does it contain?
+>
+> > ## Solution
+> >
+> > The file `/singularity` contains a simple shell script that is executed
+> > when the container is ran in appliance mode.
+> > ~~~
+> > #!/bin/sh
+> >
+> > fortune | cowsay | lolcat
+> > ~~~
+> > We will see later how to specify this run script when creating containers.
+> {: .solution}
+{: .challenge}
 
 ### Using the Jefferson Lab Common Environment container
 
