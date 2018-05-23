@@ -85,8 +85,9 @@ world!" or something similar.
 >    ~~~
 >
 > > ## Solution
-> > You should have seen the following output:
+> > You should see the following output:
 > > ~~~
+> > Progress |===================================| 100.0%
 > > / I'll burn my books.    \
 > > |                        |
 > > \ -- Christopher Marlowe /
@@ -97,6 +98,7 @@ world!" or something similar.
 > >                 ||----w |
 > >                 ||     ||
 > > ~~~
+> > Likely with a different quote...
 > {: .solution}
 {: .challenge}
 
@@ -105,7 +107,7 @@ world!" or something similar.
 When you have downloaded a container once, there is no need to download it again
 and again. We can run the local copy:
 ~~~
-singularity run lolcow_helloworld.simg
+singularity run GodloveD-lolcow-master-latest.simg
 ~~~
 You will notice that this command, naturally, completed a lot more quickly.
 
@@ -117,8 +119,33 @@ shub link, or (as we will see later) a docker link.
 We can also interact with our container through a shell environment. Think of
 this as "logging into" your container.
 ~~~
-singularity shell lolcow_helloworld.simg
+singularity shell GodloveD-lolcow-master-latest.simg
 ~~~
+
+> ## Navigate around inside the container shell and note the differences.
+>
+> Start a shell inside the lolcow container and explore the differences with the
+> host operating system.
+>
+> 1. Do you still have access to the current directory?
+> 2. Do you still have access to the home directory?
+> 2. Do you still have access to the /cache directory?
+> 3. Do you still have access to the /apps directory?
+> 4. When you run the container, the command `fortune` is called to generate the
+>    quote. Where is the command `fortune` located (use the command `which` to
+>    find out)? Is this command available on the host operating system?
+> 5. Do you still have access to, for example, the `jcache` command that is
+>    available on the host operating system?
+>
+> > ## Solution
+> >
+> > The container provides transparent access to the current directory, to the
+> > home directories, and to a selection of common data storage paths. However,
+> > it provides its own overlay of the system directories where executables are
+> > stored. This is where the `fortune` command is found, in `/usr/games/bin`,
+> > a path that does not exist on the host operating system.
+> {: .solution}
+{: .challenge}
 
 ## Containers as an appliance vs. containers as an environment
 
