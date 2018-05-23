@@ -1,10 +1,9 @@
 ---
-title: "Creating your own containers"
+title: "Using docker containers"
 teaching: 10
 exercises: 5
 questions:
-- "How can I create my own containers?"
-- "Why should I build docker containers even if I am using singularity?"
+- "Why should I know about docker containers if I am using singularity?"
 objectives:
 - "Understand how container layering allows for portability and reusability."
 - "Map the ecosystem of services that can take advantage of docker containers."
@@ -20,7 +19,7 @@ about singularity containers with our friends at Amazon Web Services, GitHub, or
 literally any other large software organization that is investing in
 containerization and virtualization.
 
-They will talk to you have about *docker*.
+They will talk to you about *docker*.
 
 ## Singularity, Docker: What's all that about?
 
@@ -32,13 +31,13 @@ many trade-offs on security to the point where it is not a workable solution.
 Effectively one would need to give superuser privileges to all docker users at
 Jefferson Lab...
 
-This is where singularity comes in! At no point in the past episode did you need
+This is where singularity comes in! At no point in this lesson did you need
 superuser privileges to run a guest operating system on the Jefferson Lab
 interactive farm node.
 
 But wait, there's more!
 
-Singularity can natively load docker containers, directly from docker hub.
+Singularity can natively load docker containers, directly from Docker Hub (where docker containers are typically housed).
 ~~~
 singularity pull docker://electronioncollider/jleic:1.0.0
 singularity run jleic-1.0.0.simg

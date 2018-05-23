@@ -31,7 +31,7 @@ the lolcow container.
 Since there is not a lot of versioning one can do on this container, we will
 first introduce a container where versions ARE important.
 
-## Retrieving the Jefferson Lab Common Environment container
+## Retrieving the Jefferson Lab Common Environment container from Singularity Hub
 
 Now that we have the basics of containers behind us, we can use our first
 'useful' physics container: the Jefferson Lab Common Environment container. This
@@ -101,7 +101,7 @@ This will load the Jefferson Lab Common Environment, version 2.2. Note that the
 container with tag 2.2 only contains the Jefferson Lab Common Environment,
 version 2.2.
 
-> ## Retrieve the Jefferson Lab Common Environment container, tag 2.2
+> ## Load the Jefferson Lab Common Environment, version 2.2
 >
 > 1. Open a shell in the JeffersonLab-jlabce-master-2.2.simg container.
 > 2. Unset the OSRELEASE variable
