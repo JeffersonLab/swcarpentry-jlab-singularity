@@ -194,7 +194,8 @@ Here is how we download the container:
 singularity pull shub://JeffersonLab/jlabce
 singularity shell jlabce-master.simg
 ~~~
+
 We could have used the `singularity shell` command as well, but this
-demonstrates how we can separate the downloading from running (when using the
-container as an appliance) or opening a shell (when using the container as an
-environment).
+demonstrates how with `pull` we can separate the downloading from running (when
+using the container as an appliance) or opening a shell (when using the
+container as an environment).
