@@ -122,6 +122,7 @@ studies, tag 1.0.3.
 >
 > The location on Docker Hub is `electronioncollider/jleic:1.0.3`
 >
+> > ## Solution
 > > ~~~
 > > Docker image path: index.docker.io/electronioncollider/jleic:1.0.3
 > > Cache folder set to /lustre/expphy/volatile/hallc/qweak/wdconinc/singularity/docker
