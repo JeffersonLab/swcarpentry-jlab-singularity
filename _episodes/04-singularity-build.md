@@ -34,7 +34,7 @@ The container uses Ubuntu 16.04 as a base layer, installs fortune, cowsay, and
 lolcat, sets the command search path, and defines an entry point (which is
 called when we run the container).
 
-There is nothing more to writing a Dockerfile recipe than writing a shell script  
+There is nothing more to writing a Dockerfile recipe than writing a shell script
 that specifies the steps to take to create container.
 
 ## Storing a Dockerfile on GitHub allows integration with Docker Hub
