@@ -79,3 +79,56 @@ container as an environment).
 {: .challenge}
 
 ## Using the Jefferson Lab Common Environment container
+
+We can open a shell inside the Jefferson Lab Common Environment container, but
+we still need to setup the actual environment (just as simply logging in on the
+interactive farm nodes does not give you access to the scientific software).
+
+Because the operating system in the container is technically different from the
+host operating system, and because singularity shell inherits environment
+variables, we must unset the variable OSRELEASE inside the container with
+~~~
+unset OSRELEASE
+~~~
+Note: Once inside the container we are using the bash shell, regardless of
+what your setup may be outside the container.
+
+Once OSRELEASE is unset we can simply load the Common Environment load script:
+~~~
+source /jlab/2.2/ce/jlab.sh
+~~~
+This will load the Jefferson Lab Common Environment, version 2.2. Note that the
+container with tag 2.2 only contains the Jefferson Lab Common Environment,
+version 2.2.
+
+> ## Retrieve the Jefferson Lab Common Environment container, tag 2.2
+>
+> 1. Open a shell in the JeffersonLab-jlabce-master-2.2.simg container.
+> 2. Unset the OSRELEASE variable
+> 3. Load the Jefferson Lab Common Environment, version 2.2.
+>
+> > ## Solution
+> > ~~~
+> > singularity shell JeffersonLab-jlabce-master-2.2.simg
+> > unset OSRELEASE
+> > source /jlab/2.2/ce/jlab.sh
+> > ~~~
+> >
+> > This should have loaded the following software versions:
+> > ~~~
+> > BANKS         version:  1.4
+> > CCDB          version:  1.06.02
+> > CLHEP         version:  2.3.4.5
+> > EVIO          version:  5.1
+> > GEANT4        version:  4.10.03.p02
+> > GEMC          version:  2.6
+> > JANA          version:  0.7.7p1
+> > MLIBRARY      version:  1.2
+> > MYSQL         installed in  /jlab/2.2/Linux_CentOS7.3.1611-x86_64-gcc4.8.5/mysql/lib
+> > QT            using system installation
+> > ROOT          version:  6.12.06
+> > SCONS         version:  1.6
+> > XERCESC       version:  3.2.0
+> > ~~~
+> {: .solution}
+{: .challenge}
