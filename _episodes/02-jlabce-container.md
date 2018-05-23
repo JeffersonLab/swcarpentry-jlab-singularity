@@ -1,7 +1,7 @@
 ---
 title: "Running the JLab CE container"
 teaching: 5
-exercises: 5
+exercises: 10
 questions:
 - "How can we replicate the Jefferson Lab Common Environment on other systems?"
 objectives:

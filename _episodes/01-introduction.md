@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 teaching: 10
-exercises: 5
+exercises: 10
 questions:
 - "How can we replicate other operating system environments on?"
 objectives:
