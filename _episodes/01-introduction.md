@@ -3,13 +3,13 @@ title: "Introduction"
 teaching: 10
 exercises: 5
 questions:
-- "How can we replicate the Jefferson Lab environment on other systems?"
+- "How can we replicate other operating system environments on?"
 objectives:
 - "Understand how containers are a way of packaging a full running environment."
 - "Set up your local shell to allow access to the singularity command."
-- "Load an example singularity shell."
+- "Load a simple singularity shell."
 keypoints:
-- "Containers allow us to package up entire running environments for posterity."
+- "Containers allow us to package up entire operating system environments."
 ---
 
 ## Using the singularity command
@@ -181,21 +181,3 @@ what best fits the use case that you have in mind. As a user you may find the
 > > We will see later how to specify this run script when creating containers.
 > {: .solution}
 {: .challenge}
-
-### Using the Jefferson Lab Common Environment container
-
-Now that we have the basics of containers behind us, we can use our first
-'useful' container: the Jefferson Lab Common Environment container. This
-container replicates the scientific software suite that is installed on the
-interactive farm nodes, but packages it up in a nice container.
-
-Here is how we download the container:
-~~~
-singularity pull shub://JeffersonLab/jlabce
-singularity shell jlabce-master.simg
-~~~
-
-We could have used the `singularity shell` command as well, but this
-demonstrates how with `pull` we can separate the downloading from running (when
-using the container as an appliance) or opening a shell (when using the
-container as an environment).
