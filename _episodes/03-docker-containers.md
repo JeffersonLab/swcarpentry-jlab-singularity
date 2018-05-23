@@ -9,8 +9,6 @@ objectives:
 - "Map the ecosystem of services that can take advantage of docker containers."
 keypoints:
 - "Docker containers can be used on the widest array of platforms."
-- "Dockerfiles are recipes for docker containers."
-- "By storing Dockerfiles in a GitHub repository we gain version both tracking and cloud building."
 ---
 
 Up to this point we have exclusively talked about singularity as our interface
@@ -110,9 +108,22 @@ Jefferson Lab Common Environment container.
 > > CentOS 7.3 layer, you would not need to download nearly as much.
 > > Nevertheless, the final singularity image (`.simg`) would again be about
 > > 2 GB large.
+> {: .solution}
+{: .challenge}
 
+## Retrieve Electron Ion Collider containers directly from Docker Hub
+
+But, of course, now that we have gotten the hang of this, why stop here?
+
+We can pull the environment for the Jefferson Lab EIC (JLEIC) simulation
+studies, tag 1.0.3.
+
+> ## Retrieve the Jefferson Lab Electron Ion Collider (JLEIC) container
+>
+> The location on Docker Hub is `electronioncollider/jleic:1.0.3`
+>
 > > ~~~
-> > Docker image path: index.docker.io/electronioncollider/jleic:1.0.0
+> > Docker image path: index.docker.io/electronioncollider/jleic:1.0.3
 > > Cache folder set to /lustre/expphy/volatile/hallc/qweak/wdconinc/singularity/docker
 > > [34/34] |===================================| 100.0%
 > > Importing: base Singularity environment
@@ -157,18 +168,21 @@ Jefferson Lab Common Environment container.
 > > WARNING: Building container as an unprivileged user. If you run this container as root
 > > WARNING: it may be missing some functionality.
 > > Building Singularity image...
-> > Singularity container built: ./jleic-1.0.0.simg
+> > Singularity container built: ./jleic-1.0.3.simg
 > > Cleaning up...
-> > Done. Container is at: ./jleic-1.0.0.simg
+> > Done. Container is at: ./jleic-1.0.3.simg
 > > ~~~
 > {: .solution}
 {: .challenge}
 
+We can even pull the equivalent environment for the Brookhaven National Lab EIC
+simulation studies, tag r964.
 
+> ## Retrieve the Brookhaven National Lab Electron Ion Collider container
+>
+> The location on Docker Hub is `ayk1964/eicroot:r964`
+{: .challenge}
 
-~~~
-unset OSRELEASE
-source /jlab/2.1/ce/jlab.sh
-~~~
-
-## Creating docker containers
+It would be unthinkable to run two disparate frameworks from different national
+labs based on different operating systems next to each other with minimal
+effort.
