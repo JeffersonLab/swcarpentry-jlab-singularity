@@ -13,17 +13,20 @@ node `ifarm` (possibly by going through `login.jlab.org`).
 ssh ifarm
 ~~~
 
-## Local installation of singularity
+## Optionally, install singularity on a local linux system
 
 You can also install singularity locally or on another linux system. At this
 point singularity is only supported on linux, not on Windows or Mac.
 
-To install singularity, execute the following commands:
+To install singularity 2.5.1, execute the following commands:
 ~~~
+VERSION=2.5.1
 cd /tmp
-wget
-tar -zxvf
+wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz
+tar xvf singularity-$VERSION.tar.gz
+cd singularity-$VERSION
 ./configure --prefix=/usr/local
 make
 sudo make install
 ~~~
+You can find what the latest version is on the [Singularity GitHub repository](https://github.com/singularityware/singularity/releases).
