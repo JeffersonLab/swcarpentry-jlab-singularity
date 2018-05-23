@@ -14,6 +14,14 @@ keypoints:
 - "By storing Dockerfiles in a GitHub repository we gain version both tracking and cloud building."
 ---
 
+Up to this point we have exclusively talked about singularity as our interface
+to containers. However, you will likely be faced with blank stares if you talk
+about singularity containers with our friends at Amazon Web Services, GitHub, or
+literally any other large software organization that is investing in
+containerization and virtualization.
+
+They will talk to you have about *docker*.
+
 ## Singularity, Docker: What's all that about?
 
 The most common container format currently in use is not singularity, but rather
@@ -91,7 +99,6 @@ Done. Container is at: ./jleic-1.0.0.simg
 ~~~
 unset OSRELEASE
 source /jlab/2.1/ce/jlab.sh
-which root
 ~~~
 
 ## Creating docker containers
