@@ -30,7 +30,7 @@ singularity
 When you log in again a next time, you will need to repeat the `module load`
 command.
 
-> ## Add the `module load` command to your login script
+> ## Add the 'module load' command to your login script
 >
 > To avoid having to enter the same `module load` command every time we log in,
 > it is useful to add it to the login script `.login`.
@@ -66,12 +66,13 @@ setenv SINGULARITY_CACHEDIR .
 
 ## Running your first container
 
-Naturally, we start by running a first container that just returns "hello, world!"
+Naturally, we start by running a first container that just returns "hello,
+world!" or something similar.
 
 > ## Running your first container, directly from the cloud!
 >
 > Just as git can clone from a URL, singularity can pull from a URL. In this
-> case we will pull from shub://lolcow/helloworld.
+> case we will pull from shub://GodloveD/lolcow.
 >
 > 1. Create and navigate to a directory where you can write large files
 >    ~~~
@@ -80,13 +81,21 @@ Naturally, we start by running a first container that just returns "hello, world
 >    ~~~
 > 1. Run the container with the following command.
 >    ~~~
->    singularity run shub://lolcow/helloworld
+>    singularity run shub://GodloveD/lolcow
 >    ~~~
 >
 > > ## Solution
 > > You should have seen the following output:
 > > ~~~
-> >
+> > / I'll burn my books.    \
+> > |                        |
+> > \ -- Christopher Marlowe /
+> >  ------------------------
+> >         \   ^__^
+> >          \  (oo)\_______
+> >             (__)\       )\/\
+> >                 ||----w |
+> >                 ||     ||
 > > ~~~
 > {: .solution}
 {: .challenge}
