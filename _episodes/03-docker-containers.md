@@ -1,7 +1,7 @@
 ---
 title: "Using docker containers"
 teaching: 10
-exercises: 5
+exercises: 10
 questions:
 - "Why should I know about docker containers if I am using singularity?"
 objectives:
@@ -187,3 +187,68 @@ simulation studies, tag r964.
 It would be unthinkable to run two disparate frameworks from different national
 labs based on different operating systems next to each other with minimal
 effort.
+
+## Retrieve MOLLER simulation and analysis containers directly from Docker Hub
+
+We can pull the environment for the Jefferson Lab MOLLER simulation and analysis
+software, `remoll` and `japan`.
+
+> ## Retrieve the Jefferson Lab MOLLER simulation container
+>
+> The location on Docker Hub is `jeffersonlab/remoll:develop`
+> 
+> Once you pulled the `remoll:develop` container, run the command `remoll` inside it, either using shell or using run.
+>
+> > ## Solution
+> > ~~~
+> > $ singularity pull docker://jeffersonlab/remoll:develop
+> > Docker image path: index.docker.io/jeffersonlab/remoll:develop
+> > Cache folder set to /lustre/expphy/volatile/halla/parity/wdconinc/docker
+> > [25/25] |===================================| 100.0% 
+> > Importing: base Singularity environment
+> > Exploding layer: sha256:7dc0dca2b1516961d6b3200564049db0a6e0410b370bb2189e2efae0d368616f.tar.gz
+> > Exploding layer: sha256:a1805b8a2cb454859fe58c2629d54391acc35b3897b21c6622a5b9e18e8f1035.tar.gz
+> > Exploding layer: sha256:c44ab5e312a776234f3cce9797555cc0a15bfbef2dfcf2b0edf70d942b8f6839.tar.gz
+> > Exploding layer: sha256:d6d5f6b64ea5caa25725976e184adcd27fe8345da027015ec22533784a31b67b.tar.gz
+> > Exploding layer: sha256:9f6f42344cbd24b2fea45cce050c015feb68d6c9ad237edc803ea1339a5c5e0b.tar.gz
+> > Exploding layer: sha256:3fc272a7392ba96f3314599a9b060f6d8ef97c4f4687f219ae016084cd73c888.tar.gz
+> > Exploding layer: sha256:fbe93b2fa49adc652c5e90029c7de970c019c3e72eafb007ec300ba31fbb4e95.tar.gz
+> > Exploding layer: sha256:89e48c9012b758f506073a30968bd8ed2253948de4f0b312e6a1af8788ff01b2.tar.gz
+> > Exploding layer: sha256:19f41eb751344f2164b52a6dffc03de8a79537480099bb23b07d6e2f8d7c09f1.tar.gz
+> > Exploding layer: sha256:12a8a540c425c851f11c00b9d99ca3ba61c7bfbe5ce921355299b43d088e254f.tar.gz
+> > Exploding layer: sha256:9756d4106cff436eb75be0d4ab964e1ae6bc7f54630501c58ccd2c1d1794ccae.tar.gz
+> > Exploding layer: sha256:e6f8fbba5727edf354f2a5768e82e5676105ee50ecced1f84fca02e5c0432d81.tar.gz
+> > Exploding layer: sha256:01c6cec2a8f19d0ef4633e7b7751fc6e910a729dd50ec707e7accaddce0009b4.tar.gz
+> > Exploding layer: sha256:17cde3210398472fc61002b4250995967fbd49575ece4fb8c6d5a509c15a002d.tar.gz
+> > Exploding layer: sha256:4b0c633e1dc00b124bb8bad32d329501b947b23304a3b8dad99cd730dba3b47f.tar.gz
+> > Exploding layer: sha256:f53066f618cf176a90ff4a77e2b5f2d059ad4274712c2176ae193f8646ba37ba.tar.gz
+> > Exploding layer: sha256:1b4cb466aff0c35994f55135b0b220118c061869836350b2bb51cf078f1f031d.tar.gz
+> > Exploding layer: sha256:735b1285bcfe7d3c09287ffdb16fb12c485da74c1e59660f8eea1a6b52216e2d.tar.gz
+> > Exploding layer: sha256:4a77e8db35067d6b2b45e9df148e7ea96eab913d40f41b37962b56516b16ace7.tar.gz
+> > Exploding layer: sha256:64facce03c1968b7d769ec992dbea6805bee2d226766a1c474ad5dd26d6cfc54.tar.gz
+> > Exploding layer: sha256:962a1da5315cb09e02c747c5c7d089c9b3bd9882a8f3a3ade7b9fbcb41b79c74.tar.gz
+> > Exploding layer: sha256:194e1efc6763fd80e30fdde12a4ef9b23e9256a2f558271b538824154138d185.tar.gz
+> > Exploding layer: sha256:f6e7b5fea36201eb8d6e05b55c11b61f3d4e2e53b4ea47e473f5cbefc53e2bfc.tar.gz
+> > Exploding layer: sha256:7b4f132cf6b658e9ba3ae77ddacc44f25e2173463d084e8ee2cbad14cceb6247.tar.gz
+> > Exploding layer: sha256:a7b9f4862932d794bd825994d2bd1395877f09ad5d4384cc3e5aa8a0c1a7acec.tar.gz
+> > Exploding layer: sha256:a90f02738b7659105627db1232ba06b308fe8db1a11b835c297c7bafa82417c9.tar.gz
+> > Building Singularity image...
+> > Singularity container built: ./remoll-develop.simg
+> > Cleaning up...
+> > Done. Container is at: ./remoll-develop.simg
+> > $ singularity run remoll-develop.simg remoll
+> > ~~~
+> {: .solution}
+{: .challenge}
+
+> ## Retrieve the Jefferson Lab MOLLER analyzer container
+>
+> The location on Docker Hub is `jeffersonlab/japan:develop`
+>
+> > ## Solution
+> > ~~~
+> > $ singularity pull docker://jeffersonlab/japan:develop
+> > $ singularity run japan-develop.simg build/qwparity
+> > ~~~
+> {: .solution}
+{: .challenge}
