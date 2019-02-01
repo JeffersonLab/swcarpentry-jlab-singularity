@@ -266,10 +266,11 @@ Of course, ultimately the goal is to submit farm jobs with singularity. Here is 
    setenv SINGULARITY_CACHEDIR .
    module load singularity
    cd /volatile/halla/parity/$USER/singularity
-   singularity run japan-develop.simg build/qwparity
+   singularity run remoll-develop.simg build/remoll /volatile/halla/parity/$USER/singularity/runexample.mac
   ]]></Command>
 
   <Job>
   </Job>
 </Request>
 ```
+Since (currently) the command is run from a fixed directory inside the container, you have to both specify an absolute path to the macro on the command line and specify an absolute path to the output ROOT file inside the macro.
