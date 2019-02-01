@@ -252,3 +252,24 @@ software, `remoll` and `japan`.
 > > ~~~
 > {: .solution}
 {: .challenge}
+
+## Submitting farm jobs with singularity
+
+Of course, ultimately the goal is to submit farm jobs with singularity. Here is a basic xml job scripts which just prints the usage information for one of the japan components:
+```
+<Request>
+  <Email email="username@jlab.org" request="false" job="false"/>
+  <Project name="moller12gev"/>
+  <Track name="simulation"/>
+  <Name name="remoll-singularity"/>
+  <Command><![CDATA[
+   setenv SINGULARITY_CACHEDIR .
+   module load singularity
+   cd /volatile/halla/parity/$USER/singularity
+   singularity run japan-develop.simg build/qwparity
+  ]]></Command>
+
+  <Job>
+  </Job>
+</Request>
+```
